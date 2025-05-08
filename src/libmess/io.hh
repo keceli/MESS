@@ -148,6 +148,8 @@ namespace IO {
     //
     explicit Offset (int s) : _value(0), _step(s) {}
 
+    operator std::string () const { return std::string(_value, ' '); }
+
     void increase () { _value += _step; }
     
     void decrease () { _value -= _step; }
